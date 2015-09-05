@@ -6,7 +6,6 @@ hilight
 Status](https://travis-ci.org/trinker/hilight.svg?branch=master)](https://travis-ci.org/trinker/hilight)
 [![Coverage
 Status](https://coveralls.io/repos/trinker/hilight/badge.svg?branch=master)](https://coveralls.io/r/trinker/hilight?branch=master)
-
 <a href="https://img.shields.io/badge/Version-0.0.1-orange.svg"><img src="https://img.shields.io/badge/Version-0.0.1-orange.svg" alt="Version"/></a>
 </p>
 **hilight** is an **R** package to allow for easier highlighting of text
