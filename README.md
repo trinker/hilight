@@ -11,8 +11,24 @@ Status](https://coveralls.io/repos/trinker/hilight/badge.svg?branch=master)](htt
 **hilight** is an **R** package to allow for easier highlighting of text
 substrings as an HTML file.
 
+
+Table of Contents
+============
+
+-   [Usage](#usage)
+-   [Installation](#installation)
+-   [Examples](#examples)
+    -   [Mark Words](#mark-words)
+    -   [Mark Word Stems](#mark-word-stems)
+    -   [Mark Regex](#mark-regex)
+    -   [Mark Sentences](#mark-sentences)
+        -   [Example 1: Words](#example-1-words)
+        -   [Example 2: End Marks](#example-2-end-marks)
+-   [Contact](#contact)
+
 Usage
-=====
+============
+
 
 The user goes through the following process:
 
@@ -56,24 +72,8 @@ These mark functions markup the body string with html `mark` tags with a
 class that was supplied to `highlight_template`. These also correspond
 to a color in the css in the `highlight_template` output.
 
-
-Table of Contents
-============
-
--   [Usage](#usage)
--   [Installation](#installation)
--   [Examples](#examples)
-    -   [Mark Words](#mark-words)
-    -   [Mark Word Stems](#mark-word-stems)
-    -   [Mark Regex](#mark-regex)
-    -   [Mark Sentences](#mark-sentences)
-        -   [Example 1: Words](#example-1-words)
-        -   [Example 2: End Marks](#example-2-end-marks)
--   [Contact](#contact)
-
 Installation
 ============
-
 
 To download the development version of **hilight**:
 
