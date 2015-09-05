@@ -11,6 +11,9 @@ Status](https://coveralls.io/repos/trinker/hilight/badge.svg?branch=master)](htt
 **hilight** is an **R** package to allow for easier highlighting of text
 substrings as an HTML file.
 
+Usage
+=====
+
 The user goes through the following process:
 
 1.  Generate a template via `highlight_template` with css markup for
@@ -57,6 +60,7 @@ to a color in the css in the `highlight_template` output.
 Table of Contents
 ============
 
+-   [Usage](#usage)
 -   [Installation](#installation)
 -   [Examples](#examples)
     -   [Mark Words](#mark-words)
