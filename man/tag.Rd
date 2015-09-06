@@ -10,6 +10,7 @@
 \alias{p}
 \alias{span}
 \alias{tag}
+\alias{u}
 \title{Wrapp Text With HTML Tags}
 \usage{
 tag(x, left, right = gsub("^<", "</", left))
@@ -29,6 +30,8 @@ span(x, extra = "")
 b(x)
 
 em(x)
+
+u(x)
 }
 \arguments{
 \item{x}{A text string.}

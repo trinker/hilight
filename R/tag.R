@@ -60,3 +60,7 @@ b <- function(x) tag(x, "<b>")
 #' @export
 em <- function(x) tag(x, "<em>")
 
+#' @rdname tag
+#' @export
+u <- function(x) tag(x, "<u>")
+
