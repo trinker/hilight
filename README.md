@@ -118,7 +118,7 @@ content and then put that into an HTML template.
         insert_body(body) %>%
         template2html()
 
-        open_html()
+    open_html()
 
 ![](inst/figure/c1.png)
 
