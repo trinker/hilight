@@ -89,8 +89,16 @@ development version:
 Examples
 ========
 
+First and foremost the user will want to markup some content to insert
+into the template body. The following examples show how to mark up the
+content and generate a highlighted HTML document.
+
 Mark Words
 ----------
+
+Highlight specific words. Also note the **dplyr** syntax that may make
+ordering a bit more understandable. Notice that we generate highlighted
+content and then put that into an HTML template.
 
     x <-"I like good cheese but hate Bad cheese"
     words <- c("cheese", "like", "good", "bad")
@@ -102,10 +110,23 @@ Mark Words
     template2html(insert_body(highlight_template(marks), body))
     open_html()
 
+    ## dplyr Syntax
+    library(dplyr)
+
+    marks %>%
+        highlight_template() %>%
+        insert_body(body) %>%
+        template2html()
+
+        open_html()
+
 ![](inst/figure/c1.png)
 
 Mark Word Stems
 ---------------
+
+Highlight word stems. For example `cheese` matches "cheese" and
+"cheeses". Give the shortest possible substring as a stem.
 
     x <-"I like good cheeses but she hated Bad cheese"
     stems <- c("cheese", "like", "good", "bad")
@@ -122,6 +143,9 @@ Mark Word Stems
 Mark Regex
 ----------
 
+Highlight based on regexes. Ths is the most flexible but takes knowledge
+of regular expressions.
+
     x <-"I like good cheeses but she hated Bad cheese.  Really hates it"
     regex <- c("chees[^ ]*\\b", "like", "hate[^ ]*\\b", "good", "bad\\b")
     marks_class <- c("neutral", "pos", "neg", "pos", "neg")
@@ -137,6 +161,11 @@ Mark Regex
 
 Mark Sentences
 --------------
+
+Highlight sentences if they meet a contiditon (If multiple conditions
+are met the first condition that is met will be highlighted). This
+essentially splits content into sentences and uses a `grepl` to
+determine if a condition is met.
 
 ### Example 1: Words
 
