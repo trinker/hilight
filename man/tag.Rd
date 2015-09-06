@@ -2,15 +2,25 @@
 % Please edit documentation in R/tag.R
 \name{tag}
 \alias{b}
+\alias{b_}
 \alias{em}
+\alias{em_}
 \alias{h1}
+\alias{h1_}
 \alias{h2}
+\alias{h2_}
 \alias{h3}
+\alias{h3_}
 \alias{h4}
+\alias{h4_}
 \alias{p}
+\alias{p_}
 \alias{span}
+\alias{span_}
 \alias{tag}
+\alias{tag_}
 \alias{u}
+\alias{u_}
 \title{Wrapp Text With HTML Tags}
 \usage{
 tag(x, left, right = gsub("^<", "</", left))
@@ -32,6 +42,26 @@ b(x)
 em(x)
 
 u(x)
+
+tag_(..., left, right = gsub("^<", "</", left))
+
+p_(...)
+
+h1_(...)
+
+h2_(...)
+
+h3_(...)
+
+h4_(...)
+
+span_(..., extra = "")
+
+b_(...)
+
+em_(...)
+
+u_(...)
 }
 \arguments{
 \item{x}{A text string.}
@@ -41,19 +71,27 @@ u(x)
 \item{right}{A right tag.}
 
 \item{extra}{Additional arguments to pass to a left tag such as styling.}
+
+\item{\dots}{Multiple text strings.}
 }
 \value{
 Returns a vector of strings wrpped in HTML tags.
 }
 \description{
 Wrap text with select HTML tags.  \code{tag} is generic in comparison to
-specific tag types such as \code{p}.
+specific tag types such as \code{p}.  Functions also contain an underscore
+version (e.g., \code{span_}).  This version uses a built in
+\code{\link[base]{paste}} to paste all elements together.  For example the
+following are equivalent: \cr \cr
+\code{h1(paste(LETTERS, ": ", em(letters)))} \cr
+\code{h1_(LETTERS, ": ", em(letters))} \cr \cr
+This is more natural to write with and more akin to how HTML tags work.
 }
 \examples{
 tag(LETTERS, "<iframe>")
 
 p(LETTERS)
-h1(paste0(LETTERS, ": ", em(letters)))
+h1_(LETTERS, ": ", em(letters))
 p(paste(b(LETTERS), 1:26, letters))
 
 span(LETTERS)
