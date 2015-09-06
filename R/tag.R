@@ -19,10 +19,9 @@
 #'
 #' span(LETTERS)
 #' set.seed(10)
-#' content <-p(span(LETTERS, extra=sprintf("style=\"color:%s\"", sample(colors(), 26))))
-#'
+#' (body <-p(span(LETTERS, extra=sprintf("style=\"color:%s\"", sample(colors(), 26)))))
 #' \dontrun{
-#' template2html(insert_body(highlight_template(c(x="")), content ))
+#' template2html(insert_body(highlight_template(c(x="")), body))
 #' open_html()
 #' }
 tag <- function(x, left, right = gsub("^<", "</", left)){
