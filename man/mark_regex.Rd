@@ -38,7 +38,8 @@ open_html()
 }
 }
 \seealso{
-Other mark.functions: \code{\link{mark_sentences}};
+Other mark.functions: \code{\link{mark_sentences}},
+  \code{\link{mark_sentences2}};
   \code{\link{mark_word_stems}}; \code{\link{mark_words}}
 }
 

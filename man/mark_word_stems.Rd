@@ -39,6 +39,7 @@ open_html()
 }
 \seealso{
 Other mark.functions: \code{\link{mark_regex}};
-  \code{\link{mark_sentences}}; \code{\link{mark_words}}
+  \code{\link{mark_sentences}},
+  \code{\link{mark_sentences2}}; \code{\link{mark_words}}
 }
 

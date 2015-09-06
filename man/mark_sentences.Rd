@@ -2,9 +2,12 @@
 % Please edit documentation in R/mark_sentences.R
 \name{mark_sentences}
 \alias{mark_sentences}
+\alias{mark_sentences2}
 \title{Mark Words Containing Regex With Class for Highlighting}
 \usage{
 mark_sentences(x, regex, marks_class, ignore.case = FALSE)
+
+mark_sentences2(x, classes)
 }
 \arguments{
 \item{x}{A character vector with regex to operate on.}
@@ -16,13 +19,21 @@ length).  These are dictated by the css generated for marks in
 \code{highlight_template}.}
 
 \item{ignore.case}{logical.  If \code{TRUE} case is ignored.}
+
+\item{classes}{A predetermined vector of classes to apply to
+\code{split_sentences(x)}.}
 }
 \value{
-Returns a character vector with mark tags added around words that
+Returns a character vector with mark tags added around sentences that
 contain the regex.
+
+Returns a character vector with mark tags added around predetermined
+sentences.
 }
 \description{
-Mark words containing regex with a class for highlighting.
+\code{mark_sentences} - Mark sentences containing regex with a class for highlighting.
+
+\code{mark_sentences2} - Mark sentences predetemined class for highlighting.
 }
 \examples{
 x <- c("I like good cheeses but she hated Bad cheese.  Do you?",
@@ -51,8 +62,26 @@ marks <- c(statment = "lightgreen", question = "pink", exclamation = "orange")
 template2html(insert_body(highlight_template(marks), body))
 open_html()
 }
+
+## `mark_sentences2`: predetermined classes per sentence
+x <- c("I like it.  Well I like it some.",  "You lie!",
+    "I do?  I try not to.  I suppose sometimes...")
+
+## `classes` must be this length
+length(unlist(split_sentences(x)))
+
+(body <- mark_sentences2(x, c("neg", "", "", "pos", "neutral", "")))
+\dontrun{
+## To an external file
+marks <- c(pos = "lightgreen", neg = "pink", neutral = "yellow")
+template2html(insert_body(highlight_template(marks), p(body)))
+open_html()
+}
 }
 \seealso{
+Other mark.functions: \code{\link{mark_regex}};
+  \code{\link{mark_word_stems}}; \code{\link{mark_words}}
+
 Other mark.functions: \code{\link{mark_regex}};
   \code{\link{mark_word_stems}}; \code{\link{mark_words}}
 }
