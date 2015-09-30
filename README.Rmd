@@ -34,7 +34,7 @@ The user can generate a highlight marked body character vector to insert into th
 | Function         |  Description                                          |
 |------------------|-------------------------------------------------------|
 | `mark_words`      | Highlight specific words                       |
-| `mark_words`      | Highlight word stems                       |
+| `mark_word_stems`      | Highlight word stems                       |
 | `mark_regex`   | Highlight by regex                     |
 | `mark_sentences`   | Highlight sentences by `grepl`                      |
 

@@ -54,7 +54,7 @@ into the html document using four functions:
 <td align="left">Highlight specific words</td>
 </tr>
 <tr class="even">
-<td align="left"><code>mark_words</code></td>
+<td align="left"><code>mark_word_stems</code></td>
 <td align="left">Highlight word stems</td>
 </tr>
 <tr class="odd">
