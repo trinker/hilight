@@ -27,7 +27,7 @@ contain the stems.
 Mark words containing stems with a class for highlighting.
 }
 \examples{
-x <-"I like good cheeses but she hated Bad cheese"
+x <-"I like good cheeses but she hated Bad cheese."
 stems <- c("cheese", "like", "good", "bad")
 marks_class <- c("neutral", "pos", "pos", "neg")
 marks <- c(pos = "lightgreen", neg = "pink", neutral = "yellow")

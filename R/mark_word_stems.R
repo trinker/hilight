@@ -14,7 +14,7 @@
 #' @family mark functions
 #' @export
 #' @examples
-#' x <-"I like good cheeses but she hated Bad cheese"
+#' x <-"I like good cheeses but she hated Bad cheese."
 #' stems <- c("cheese", "like", "good", "bad")
 #' marks_class <- c("neutral", "pos", "pos", "neg")
 #' marks <- c(pos = "lightgreen", neg = "pink", neutral = "yellow")
@@ -30,7 +30,7 @@ mark_word_stems <- function(x, stems, marks_class, ignore.case = TRUE, ...){
     stopifnot(length(stems) == length(marks_class))
 
     reps <- paste0(mark_start(marks_class), "\\1", mark_end)
-    .mgsub(paste0("\\b(", stems, "[^ ]*\\b)"), reps, text.var = x, fixed=FALSE,
+    .mgsub(paste0("\\b(", stems, "[a-zA-Z0-9'-]*\\b)"), reps, text.var = x, fixed=FALSE,
         ignore.case = ignore.case, ...)
 }
 

@@ -8,7 +8,7 @@ Description: Highlight text substrings as an HTML file.
 Depends: R (>= 3.2.2)
 Imports: data.table, methods, stats, stringi, utils
 Suggests: testthat
-Date: 2015-09-30
+Date: 2015-10-01
 License: GPL-2
 LazyData: TRUE
 Roxygen: list(wrap = FALSE)
