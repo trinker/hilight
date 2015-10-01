@@ -162,8 +162,8 @@ of regular expressions.
 Mark Sentences
 --------------
 
-Highlight sentences if they meet a contiditon (If multiple conditions
-are met the first condition that is met will be highlighted). This
+Highlight sentences if they meet a condition (If multiple conditions are
+met the first condition that is met will be highlighted). This
 essentially splits content into sentences and uses a `grepl` to
 determine if a condition is met.
 

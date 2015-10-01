@@ -30,9 +30,7 @@ mark_regex <- function(x, regex, marks_class, ignore.case = FALSE, ...){
     stopifnot(length(regex) == length(marks_class))
 
     reps <- paste0(mark_start(marks_class), "\\1", mark_end)
-    .mgsub(paste0("\\b(", regex, "[^ ]*\\b)"), reps, text.var = x, fixed=FALSE,
+    .mgsub(paste0("(", regex, ")"), reps, text.var = x, fixed=FALSE,
         ignore.case = ignore.case, ...)
 }
-
-
 
