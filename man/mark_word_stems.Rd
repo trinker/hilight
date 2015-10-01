@@ -4,7 +4,7 @@
 \alias{mark_word_stems}
 \title{Mark Words Containing Stems With Class for Highlighting}
 \usage{
-mark_word_stems(x, stems, marks_class, ignore.case = TRUE)
+mark_word_stems(x, stems, marks_class, ignore.case = TRUE, ...)
 }
 \arguments{
 \item{x}{A character vector with stems to operate on.}
@@ -16,6 +16,8 @@ length).  These are dictated by the css generated for marks in
 \code{highlight_template}.}
 
 \item{ignore.case}{logical.  If \code{TRUE} case is ignored.}
+
+\item{\ldots}{Other arguments passed to \code{\link[base]{gsub}}.}
 }
 \value{
 Returns a character vector with mark tags added around words that

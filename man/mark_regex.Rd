@@ -4,7 +4,7 @@
 \alias{mark_regex}
 \title{Mark Words Containing Regex With Class for Highlighting}
 \usage{
-mark_regex(x, regex, marks_class, ignore.case = FALSE)
+mark_regex(x, regex, marks_class, ignore.case = FALSE, ...)
 }
 \arguments{
 \item{x}{A character vector with regex to operate on.}
@@ -16,6 +16,8 @@ length).  These are dictated by the css generated for marks in
 \code{highlight_template}.}
 
 \item{ignore.case}{logical.  If \code{TRUE} case is ignored.}
+
+\item{\ldots}{Other arguments passed to \code{\link[base]{gsub}}.}
 }
 \value{
 Returns a character vector with mark tags added around words that

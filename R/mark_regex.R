@@ -8,6 +8,7 @@
 #' length).  These are dictated by the css generated for marks in
 #' \code{highlight_template}.
 #' @param ignore.case logical.  If \code{TRUE} case is ignored.
+#' @param \ldots Other arguments passed to \code{\link[base]{gsub}}.
 #' @return Returns a character vector with mark tags added around words that
 #' contain the regex.
 #' @family mark functions
@@ -25,12 +26,12 @@
 #' open_html()
 #' }
 #'
-mark_regex <- function(x, regex, marks_class, ignore.case = FALSE){
+mark_regex <- function(x, regex, marks_class, ignore.case = FALSE, ...){
     stopifnot(length(regex) == length(marks_class))
 
     reps <- paste0(mark_start(marks_class), "\\1", mark_end)
     .mgsub(paste0("\\b(", regex, "[^ ]*\\b)"), reps, text.var = x, fixed=FALSE,
-        ignore.case = ignore.case)
+        ignore.case = ignore.case, ...)
 }
 
 
