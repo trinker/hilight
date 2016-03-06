@@ -57,7 +57,7 @@ period_reg <- paste0(
         "|",
     "(?:(?<=[A-Z])\\.(?=\\s??[A-Z]\\.))",
         "|",
-    "(?:(?<=[A-Z])\\.(?!\\s[A-Z][A-Za-z]))"
+    "(?:(?<=[A-Z])\\.(?!\\s+[A-Z][A-Za-z]))"
 )
 
 
@@ -69,12 +69,12 @@ sent_regex <- sprintf("((?<=\\b(%s))\\.)|%s|(%s)",
 
 
 get_sents2 <- function(x) {
-    y <- stringi::stri_replace_all_regex(x, sent_regex, "<<<TEMP>>>")
+    y <- stringi::stri_replace_all_regex(trimws(x), sent_regex, "<<<TEMP>>>")
     stringi::stri_split_regex(y, "(?<!\\w\\.\\w.)(?<![A-Z][a-z]\\.)(?<=\\.|\\?|\\!)(\\s|(?=[a-zA-Z][a-zA-Z]*\\s))")
 }
 
 get_sentences2 <- function(x, ...) {
-    lapply(lapply(get_sents2(x), function(x) gsub("<<<TEMP>>>", ".", x)),
+    lapply(lapply(get_sents2(trimws(x)), function(x) gsub("<<<TEMP>>>", ".", x)),
         function(x) gsub("^\\s+|\\s+$", "", x))
 }
 
@@ -89,3 +89,4 @@ title_tag_table <- function (mat) {
         names(x[x > 0][1])
     }))
 }
+
