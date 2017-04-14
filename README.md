@@ -1,4 +1,4 @@
-hilight
+hilight   [![Follow](https://img.shields.io/twitter/follow/tylerrinker.svg?style=social)](https://twitter.com/intent/follow?screen_name=tylerrinker)
 ============
 
 
@@ -8,6 +8,7 @@ Status](https://travis-ci.org/trinker/hilight.svg?branch=master)](https://travis
 Status](https://coveralls.io/repos/trinker/hilight/badge.svg?branch=master)](https://coveralls.io/r/trinker/hilight?branch=master)
 <a href="https://img.shields.io/badge/Version-0.0.1-orange.svg"><img src="https://img.shields.io/badge/Version-0.0.1-orange.svg" alt="Version"/></a>
 </p>
+
 **hilight** is an **R** package to allow for easier highlighting of text
 substrings as an HTML file.
 
@@ -44,26 +45,26 @@ into the html document using four functions:
 <table>
 <thead>
 <tr class="header">
-<th align="left">Function</th>
-<th align="left">Description</th>
+<th>Function</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><code>mark_words</code></td>
-<td align="left">Highlight specific words</td>
+<td><code>mark_words</code></td>
+<td>Highlight specific words</td>
 </tr>
 <tr class="even">
-<td align="left"><code>mark_word_stems</code></td>
-<td align="left">Highlight word stems</td>
+<td><code>mark_word_stems</code></td>
+<td>Highlight word stems</td>
 </tr>
 <tr class="odd">
-<td align="left"><code>mark_regex</code></td>
-<td align="left">Highlight by regex</td>
+<td><code>mark_regex</code></td>
+<td>Highlight by regex</td>
 </tr>
 <tr class="even">
-<td align="left"><code>mark_sentences</code></td>
-<td align="left">Highlight sentences by <code>grepl</code></td>
+<td><code>mark_sentences</code></td>
+<td>Highlight sentences by <code>grepl</code></td>
 </tr>
 </tbody>
 </table>
@@ -120,7 +121,7 @@ content and then put that into an HTML template.
 
     open_html()
 
-![](inst/figure/c1.png)
+![](tools/figure/c1.png)
 
 Mark Word Stems
 ---------------
@@ -138,7 +139,7 @@ Highlight word stems. For example `cheese` matches "cheese" and
     template2html(insert_body(highlight_template(marks), body))
     open_html()
 
-![](inst/figure/c2.png)
+![](tools/figure/c2.png)
 
 Mark Regex
 ----------
@@ -157,7 +158,7 @@ of regular expressions.
     template2html(insert_body(highlight_template(marks), body))
     open_html()
 
-![](inst/figure/c3.png)
+![](tools/figure/c3.png)
 
 Mark Sentences
 --------------
@@ -182,7 +183,7 @@ determine if a condition is met.
     template2html(insert_body(highlight_template(marks), body))
     open_html()
 
-![](inst/figure/c4.png)
+![](tools/figure/c4.png)
 
 ### Example 2: End Marks
 
@@ -196,12 +197,12 @@ determine if a condition is met.
     template2html(insert_body(highlight_template(marks), body))
     open_html()
 
-![](inst/figure/c5.png)
+![](tools/figure/c5.png)
 
 Contact
 =======
 
-You are welcome to: 
-* submit suggestions and bug-reports at: <https://github.com/trinker/hilight/issues> 
-* send a pull request on: <https://github.com/trinker/hilight/> 
-* compose a friendly e-mail to: <tyler.rinker@gmail.com>
+You are welcome to:    
+- submit suggestions and bug-reports at: <https://github.com/trinker/hilight/issues>    
+- send a pull request on: <https://github.com/trinker/hilight/>    
+- compose a friendly e-mail to: <tyler.rinker@gmail.com>    

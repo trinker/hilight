@@ -80,7 +80,7 @@ marks %>%
 open_html()
 ```
 
-![](inst/figure/c1.png)
+![](tools/figure/c1.png)
 
 ## Mark Word Stems
 
@@ -98,7 +98,7 @@ template2html(insert_body(highlight_template(marks), body))
 open_html()
 ```
 
-![](inst/figure/c2.png)
+![](tools/figure/c2.png)
 
 ## Mark Regex
 
@@ -117,7 +117,7 @@ template2html(insert_body(highlight_template(marks), body))
 open_html()
 ```
 
-![](inst/figure/c3.png)
+![](tools/figure/c3.png)
 
 ## Mark Sentences
 
@@ -140,7 +140,7 @@ template2html(insert_body(highlight_template(marks), body))
 open_html()
 ```
 
-![](inst/figure/c4.png)
+![](tools/figure/c4.png)
 
 ### Example 2: End Marks
 
@@ -156,7 +156,7 @@ template2html(insert_body(highlight_template(marks), body))
 open_html()
 ```
 
-![](inst/figure/c5.png)
+![](tools/figure/c5.png)
 
 # Contact
 

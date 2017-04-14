@@ -5,17 +5,10 @@ Authors@R: c(person("Tyler", "Rinker", email =
         "tyler.rinker@gmail.com", role = c("aut", "cre")))
 Maintainer: Tyler Rinker <tyler.rinker@gmail.com>
 Description: Highlight text substrings as an HTML file.
-Depends:
-    R (>= 3.2.2)
-Imports:
-    data.table,
-    methods,
-    stats,
-    stringi,
-    utils
-Suggests:
-    testthat
-Date: 2016-03-06
+Depends: R (>= 3.2.2)
+Imports: data.table, methods, stats, stringi, utils
+Suggests: testthat
+Date: 2017-04-13
 License: GPL-2
 LazyData: TRUE
 Roxygen: list(wrap = FALSE)
